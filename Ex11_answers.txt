@@ -1,0 +1,40 @@
+1. egrep -c '^[aA].*' words.txt
+2. egrep -c '.*ing.*' words.txt
+3. egrep -c '.*ing$' words.txt
+4. egrep -c '\b\w{7}\b' words.txt
+
+In Python interactive: (r\b\w{4}\b')
+
+Didnt' work: 
+('\W(\w{4})\W')
+('\s\w{4}\b')
+('\s\w{4}\s')
+('\w{4}\s')
+re.compile('\w{4}')
+re.compile('\w{4}\b')
+re.compile('\b\w\w{3}\b')
+re.compile('\w\w{3}')
+re.compile('^\w\w{3}')
+re.compile('^\w.*')
+re.compile('^/w')
+re.compile('.{3}')
+re.compile('[A-Za-z]{4}')
+
+4. egrep -c '.*('vark'|'wolf')\b' words.txt
+paranthesis for groups
+square brackets for indivudal letters?
+| or no sapce?
+
+
+Didn't work: 
+egrep -c '.*['vark''wolf']/s' words.txt
+egrep -c '.*['vark'|'wolf']' words.txt
+-c '.*('vark'|'wolf')' words.txt
+
+
+Questions
+[^SPEAK]+
+
+Why L? HE|LL|O+
+
+(A|B|C)\1 does this just look at the first letter?
